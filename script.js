@@ -33,14 +33,14 @@ form.addEventListener("submit", async (e) => {
     comments: document.getElementById("comments").value
   };
 
-
+  loading.classList.remove("hidden");
   await fetch(GOOGLE_SCRIPT_URL, {
     method: "POST",
     mode: "no-cors",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   });
-
+  loading.classList.add("hidden");
   successMsg.classList.remove("hidden");
 
   form.reset();
@@ -50,3 +50,4 @@ form.addEventListener("submit", async (e) => {
     successMsg.classList.add("hidden");
   }, 2000);
 });
+
