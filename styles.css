@@ -12,7 +12,7 @@ body {
   width: 100%;
   max-width: 400px;
   background: #ffffff;
-  padding: 30px;
+  padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
@@ -33,7 +33,7 @@ label {
 
 input, select, textarea {
   width: 100%;
-  padding: 10px 12px;
+  padding: 6px 8px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 15px;
@@ -42,7 +42,7 @@ input, select, textarea {
 }
 
 textarea {
-  height: 80px;
+  height: 60px;
   resize: none;
 }
 
@@ -77,5 +77,6 @@ button:hover {
   font-weight: bold;
   margin-top: 10px;
 }
+
 
 
