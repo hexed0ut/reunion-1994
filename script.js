@@ -51,3 +51,9 @@ form.addEventListener("submit", async (e) => {
   }, 2000);
 });
 
+addAnotherBtn.addEventListener("click", () => {
+  successMsg.classList.add("hidden");
+  addAnotherBtn.classList.add("hidden");
+});
+
+
