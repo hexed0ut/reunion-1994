@@ -2,6 +2,8 @@ const foodSelect = document.getElementById("food");
 const nonvegOptions = document.getElementById("nonveg-options");
 const form = document.getElementById("details-form");
 const successMsg = document.getElementById("success-msg");
+const loading = document.getElementById("loading");
+const addAnotherBtn = document.getElementById("add-another");
 
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1PyGs_JwOZQgGZNAcqF7Hr_wjddM09s37NO5TS8clDnhl2sv6GS0S12FcFQHp1RSG/exec";
 
@@ -21,7 +23,7 @@ form.addEventListener("submit", async (e) => {
 
   if (foodValue === "nonveg" && nonvegChoiceValue.trim() === "") {
     alert("Please select your Non-Veg choice.");
-    return; // Stop form submission
+    return;
   }
 
   const data = {
@@ -40,8 +42,10 @@ form.addEventListener("submit", async (e) => {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
   });
+  
   loading.classList.add("hidden");
   successMsg.classList.remove("hidden");
+  addAnotherBtn.classList.remove("hidden");
 
   form.reset();
   nonvegOptions.classList.add("hidden");
@@ -55,5 +59,6 @@ addAnotherBtn.addEventListener("click", () => {
   successMsg.classList.add("hidden");
   addAnotherBtn.classList.add("hidden");
 });
+
 
 
