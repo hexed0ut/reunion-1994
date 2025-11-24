@@ -52,9 +52,6 @@ form.addEventListener("submit", async (e) => {
   form.reset();
   nonvegOptions.classList.add("hidden");
 
-  setTimeout(() => {
-    successMsg.classList.add("hidden");
-  }, 2000);
 });
 
 addAnotherBtn.addEventListener("click", () => {
@@ -62,6 +59,7 @@ addAnotherBtn.addEventListener("click", () => {
   addAnotherBtn.classList.add("hidden");
   submitBtn.style.display = 'inline-block';
 });
+
 
 
 
