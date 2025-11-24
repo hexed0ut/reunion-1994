@@ -10,14 +10,6 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1PyGs_JwOZQ
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const foodValue = foodSelect.value;
-  const nonvegChoiceValue = document.getElementById("nv-choice").value;
-
-  if (foodValue === "nonveg" && nonvegChoiceValue.trim() === "") {
-    alert("Please select your Non-Veg choice.");
-    return;
-  }
-
   const data = {
     name: document.getElementById("name").value,
     age: document.getElementById("age").value,
@@ -48,6 +40,7 @@ addAnotherBtn.addEventListener("click", () => {
   addAnotherBtn.classList.add("hidden");
   submitBtn.style.display = 'inline-block';
 });
+
 
 
 
