@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Together Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>REUNION: 1994</h1>
+
+    <form id="details-form">
+
+      <label>Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label>Age</label>
+      <input type="number" id="age" placeholder="Enter your age" required>
+
+      <label>Gender</label>
+      <select id="gender" required>
+        <option value="">Select gender</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label>Food Preference</label>
+      <select id="food" required>
+        <option value="">Select...</option>
+        <option value="veg">Veg</option>
+        <option value="nonveg">Non-Veg</option>
+      </select>
+
+      <!-- Hidden MCQ section -->
+      <div id="nonveg-options" class="hidden">
+        <label>Choose your non-veg option</label>
+
+        <select id="nv-choice">
+          <option value="">Select...</option>
+          <option>Chicken</option>
+          <option>Mutton</option>
+          <option>Fish</option>
+          <option>Paneer</option>
+        </select>
+      </div>
+
+      <label>Comments</label>
+      <textarea id="comments" placeholder="If you have something to say, write here..."></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <p id="success-msg" class="hidden success">Thank you! Your response has been recorded.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
