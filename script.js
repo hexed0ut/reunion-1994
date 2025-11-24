@@ -60,7 +60,9 @@ form.addEventListener("submit", async (e) => {
 addAnotherBtn.addEventListener("click", () => {
   successMsg.classList.add("hidden");
   addAnotherBtn.classList.add("hidden");
+  submitBtn.style.display = 'inline-block';
 });
+
 
 
 
