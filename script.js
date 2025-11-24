@@ -46,7 +46,7 @@ form.addEventListener("submit", async (e) => {
   loading.classList.add("hidden");
   successMsg.classList.remove("hidden");
   addAnotherBtn.classList.remove("hidden");
-  submitBtn.style.display = 'none';
+  submitBtn.classList.add("hidden");
 
   form.reset();
   nonvegOptions.classList.add("hidden");
@@ -60,6 +60,7 @@ addAnotherBtn.addEventListener("click", () => {
   successMsg.classList.add("hidden");
   addAnotherBtn.classList.add("hidden");
 });
+
 
 
 
