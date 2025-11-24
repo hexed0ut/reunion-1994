@@ -71,3 +71,11 @@ button:hover {
   color: #2e7d32;
   font-weight: 600;
 }
+
+#loading {
+  color: #333;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
