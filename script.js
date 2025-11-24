@@ -1,5 +1,4 @@
 const foodSelect = document.getElementById("food");
-const nonvegOptions = document.getElementById("nonveg-options");
 const form = document.getElementById("details-form");
 const successMsg = document.getElementById("success-msg");
 const loading = document.getElementById("loading");
@@ -7,14 +6,6 @@ const addAnotherBtn = document.getElementById("add-another");
 const submitBtn = form.querySelector('button[type="submit"]');
 
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1PyGs_JwOZQgGZNAcqF7Hr_wjddM09s37NO5TS8clDnhl2sv6GS0S12FcFQHp1RSG/exec";
-
-foodSelect.addEventListener("change", () => {
-  if (foodSelect.value === "nonveg") {
-    nonvegOptions.classList.remove("hidden");
-  } else {
-    nonvegOptions.classList.add("hidden");
-  }
-});
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -32,7 +23,6 @@ form.addEventListener("submit", async (e) => {
     age: document.getElementById("age").value,
     gender: document.getElementById("gender").value,
     food: document.getElementById("food").value,
-    nonvegChoice: document.getElementById("nv-choice").value || "",
     comments: document.getElementById("comments").value
   };
 
@@ -50,7 +40,6 @@ form.addEventListener("submit", async (e) => {
   addAnotherBtn.classList.remove("hidden");
 
   form.reset();
-  nonvegOptions.classList.add("hidden");
 
 });
 
@@ -59,6 +48,7 @@ addAnotherBtn.addEventListener("click", () => {
   addAnotherBtn.classList.add("hidden");
   submitBtn.style.display = 'inline-block';
 });
+
 
 
 
