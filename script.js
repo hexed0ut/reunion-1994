@@ -4,6 +4,7 @@ const form = document.getElementById("details-form");
 const successMsg = document.getElementById("success-msg");
 const loading = document.getElementById("loading");
 const addAnotherBtn = document.getElementById("add-another");
+const submitBtn = form.querySelector('button[type="submit"]');
 
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby1PyGs_JwOZQgGZNAcqF7Hr_wjddM09s37NO5TS8clDnhl2sv6GS0S12FcFQHp1RSG/exec";
 
@@ -36,6 +37,7 @@ form.addEventListener("submit", async (e) => {
   };
 
   loading.classList.remove("hidden");
+  submitBtn.style.display = 'none';
   await fetch(GOOGLE_SCRIPT_URL, {
     method: "POST",
     mode: "no-cors",
@@ -46,7 +48,6 @@ form.addEventListener("submit", async (e) => {
   loading.classList.add("hidden");
   successMsg.classList.remove("hidden");
   addAnotherBtn.classList.remove("hidden");
-  submitBtn.classList.add("hidden");
 
   form.reset();
   nonvegOptions.classList.add("hidden");
